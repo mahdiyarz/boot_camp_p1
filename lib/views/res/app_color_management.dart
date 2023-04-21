@@ -6,4 +6,6 @@ abstract class AppColorManagement {
   static const Color headline = Color.fromRGBO(0, 0, 0, 1);
   static const Color primary = Color.fromRGBO(228, 149, 39, 1);
   static const Color surface = Color.fromRGBO(246, 245, 250, 1);
+  static const Color disable = Color.fromRGBO(218, 218, 218, 1);
+  static const Color onDisable = Color.fromRGBO(101, 107, 140, 1);
 }
