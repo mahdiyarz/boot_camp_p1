@@ -3,6 +3,12 @@ import 'package:flutter/material.dart';
 
 import '../res/app_assets_management.dart';
 import '../res/app_style_management.dart';
+import 'local_widgets/bell_notification.dart';
+import 'local_widgets/discover_button.dart';
+import 'local_widgets/library_tile.dart';
+import 'local_widgets/menu_button.dart';
+import 'local_widgets/scan_button.dart';
+import 'local_widgets/search_bar.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({
@@ -18,98 +24,80 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     Size deviceSize = MediaQuery.of(context).size;
     return Scaffold(
-      body: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 20.0),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.start,
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            const SizedBox(
-              height: 50,
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Container(
-                  width: 24,
-                  height: 24,
-                  padding: const EdgeInsets.symmetric(
-                    horizontal: 3.6,
-                    vertical: 4.8,
-                  ),
-                  child: Image.asset(
-                    AppAssetsManagement.menu,
-                    fit: BoxFit.contain,
-                  ),
-                ),
-                Container(
-                  padding: const EdgeInsets.symmetric(
-                    horizontal: 8,
-                    vertical: 4,
-                  ),
-                  width: 212,
-                  height: 36,
-                  decoration: BoxDecoration(
-                    color: AppColorManagement.surface,
-                    borderRadius: BorderRadius.circular(14),
-                  ),
-                  child: Row(
-                    children: [
-                      Expanded(
-                        child: TextFormField(
-                          keyboardType: TextInputType.text,
-                          decoration: const InputDecoration(
-                            border: InputBorder.none,
-                          ),
-                        ),
-                      ),
-                      Image.asset(AppAssetsManagement.search),
-                    ],
-                  ),
-                ),
-                Container(
-                  width: 28,
-                  height: 28,
-                  padding: const EdgeInsets.all(3),
-                  child: Image.asset(AppAssetsManagement.scan),
-                ),
-                Container(
-                  width: 24,
-                  height: 24,
-                  padding: const EdgeInsets.symmetric(
-                    horizontal: 2,
-                    vertical: 1,
-                  ),
-                  child: Image.asset(AppAssetsManagement.notification),
-                ),
-              ],
-            ),
-            const SizedBox(
-              height: 20,
-            ),
-            Text(
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          const SizedBox(
+            height: 50,
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: const [
+              MenuButton(),
+              SearchBar(),
+              ScanButton(),
+              BellNotification(),
+            ],
+          ),
+          const SizedBox(
+            height: 20,
+          ),
+          Padding(
+            padding: const EdgeInsets.only(left: 24.0),
+            child: Text(
               'Hi Emily,',
               style: getRegularStyle(
                 fontColor: AppColorManagement.onBackground,
               ),
             ),
-            const SizedBox(
-              height: 20,
-            ),
-            Text(
+          ),
+          const SizedBox(
+            height: 20,
+          ),
+          Padding(
+            padding: const EdgeInsets.only(left: 24.0),
+            child: Text(
               'My Library',
               style: getExtraBoldStyle(
                 fontColor: AppColorManagement.onBackground,
               ),
             ),
-            // ListView(
-            //   shrinkWrap: true,
-            //   physics: const BouncingScrollPhysics(
-            //       parent: AlwaysScrollableScrollPhysics()),
-            //   scrollDirection: Axis.horizontal,
-            // ),
-          ],
-        ),
+          ),
+          const SizedBox(
+            height: 10,
+          ),
+          SizedBox(
+            height: 210,
+            child: ListView(
+              physics: const BouncingScrollPhysics(
+                  parent: AlwaysScrollableScrollPhysics()),
+              scrollDirection: Axis.horizontal,
+              children: const [
+                SizedBox(
+                  width: 24,
+                ),
+                LibraryTile(
+                  title: 'Name of Book',
+                  picture: AppAssetsManagement.libraryBook1,
+                  percentReading: 100,
+                ),
+                SizedBox(
+                  width: 17,
+                ),
+                LibraryTile(
+                  title: 'Name of Book',
+                  picture: AppAssetsManagement.libraryBook2,
+                  percentReading: 60,
+                ),
+                SizedBox(
+                  width: 17,
+                ),
+                DiscoverButton(),
+              ],
+            ),
+          ),
+        ],
       ),
     );
   }
