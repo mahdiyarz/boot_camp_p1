@@ -1,0 +1,21 @@
+import 'package:flutter/material.dart';
+
+import '../../res/app_assets_management.dart';
+
+class MenuButton extends StatelessWidget {
+  const MenuButton({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return SizedBox(
+      width: 24,
+      height: 24,
+      child: Image.asset(
+        AppAssetsManagement.menu,
+        fit: BoxFit.contain,
+      ),
+    );
+  }
+}
