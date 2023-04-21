@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 
 abstract class AppColorManagement {
-  static const Color background = Color(0x00ffffff);
-  static const Color onBackground = Color(0x00165c73);
-  static const Color headline = Color(0x00000000);
-  static const Color primary = Color(0x00e49527);
+  static const Color background = Color.fromRGBO(255, 255, 255, 1);
+  static const Color onBackground = Color.fromRGBO(22, 92, 115, 1);
+  static const Color headline = Color.fromRGBO(0, 0, 0, 1);
+  static const Color primary = Color.fromRGBO(228, 149, 39, 1);
+  static const Color surface = Color.fromRGBO(246, 245, 250, 1);
 }
