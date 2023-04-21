@@ -1,4 +1,4 @@
-abstract class AppImageAssets {
+abstract class AppAssetsManagement {
   static const String iconPath = 'assets/icons';
   static const String menu = '$iconPath/menu.png';
   static const String notificationBadge = '$iconPath/notification_badge.png';
