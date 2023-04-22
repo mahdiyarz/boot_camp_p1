@@ -7,6 +7,12 @@ abstract class AppAssetsManagement {
       '$iconPath/notification_outline.png';
   static const String scan = '$iconPath/scan.png';
   static const String search = '$iconPath/search.png';
+  static const String library = '$iconPath/library.png';
+  static const String librarySelected = '$iconPath/library_selected.png';
+  static const String explore = '$iconPath/explore.png';
+  static const String exploreSelected = '$iconPath/explore_selected.png';
+  static const String cart = '$iconPath/cart.png';
+  static const String community = '$iconPath/community.png';
 
   static const String bookPath = 'assets/books';
   static const String libraryBook1 = '$bookPath/library_book_1.png';
