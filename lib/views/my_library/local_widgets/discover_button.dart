@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../res/app_color_management.dart';
-import '../../res/app_style_management.dart';
+import '../../res/export_resources.dart';
 
 class DiscoverButton extends StatelessWidget {
   const DiscoverButton({

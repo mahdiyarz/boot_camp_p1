@@ -3,19 +3,13 @@ import 'package:flutter/material.dart';
 import '../res/export_resources.dart';
 import 'local_widgets/export_home_widgets.dart';
 
-class HomeScreen extends StatefulWidget {
-  const HomeScreen({
+class MyLibraryScreen extends StatelessWidget {
+  const MyLibraryScreen({
     super.key,
   });
 
   @override
-  State<HomeScreen> createState() => _HomeScreenState();
-}
-
-class _HomeScreenState extends State<HomeScreen> {
-  @override
   Widget build(BuildContext context) {
-    Size deviceSize = MediaQuery.of(context).size;
     return Scaffold(
       body: Column(
         mainAxisAlignment: MainAxisAlignment.start,

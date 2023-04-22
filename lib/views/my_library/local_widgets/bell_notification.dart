@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../res/app_assets_management.dart';
+import '../../res/export_resources.dart';
 
 class BellNotification extends StatelessWidget {
   const BellNotification({

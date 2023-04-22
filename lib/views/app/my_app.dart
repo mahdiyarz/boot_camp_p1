@@ -1,18 +1,23 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
-import '../home/home_screen.dart';
+import '../my_library/my_library_screen.dart';
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
+    SystemChrome.setSystemUIOverlayStyle(
+      const SystemUiOverlayStyle(
+        statusBarColor: Colors.transparent,
       ),
-      home: const HomeScreen(),
+    );
+
+    return const MaterialApp(
+      debugShowCheckedModeBanner: false,
+      title: 'Library App',
+      home: MyLibraryScreen(),
     );
   }
 }
