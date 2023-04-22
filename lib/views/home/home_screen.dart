@@ -1,14 +1,7 @@
-import 'package:boot_camp_p1/views/res/app_color_management.dart';
 import 'package:flutter/material.dart';
 
-import '../res/app_assets_management.dart';
-import '../res/app_style_management.dart';
-import 'local_widgets/bell_notification.dart';
-import 'local_widgets/discover_button.dart';
-import 'local_widgets/library_tile.dart';
-import 'local_widgets/menu_button.dart';
-import 'local_widgets/scan_button.dart';
-import 'local_widgets/search_bar.dart';
+import '../res/export_resources.dart';
+import 'local_widgets/export_home_widgets.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({
@@ -96,6 +89,103 @@ class _HomeScreenState extends State<HomeScreen> {
                 DiscoverButton(),
               ],
             ),
+          ),
+          const SizedBox(
+            height: 24,
+          ),
+          Row(
+            children: [
+              const SizedBox(
+                width: 24,
+              ),
+              Expanded(
+                child: Text(
+                  'My Wishlist',
+                  style: getExtraBoldStyle(
+                    fontColor: AppColorManagement.primary,
+                  ),
+                ),
+              ),
+              const SeeMoreButton(),
+              const SizedBox(
+                width: 24,
+              ),
+            ],
+          ),
+          Expanded(
+            child: Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 42),
+              child: GridView(
+                gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                  crossAxisCount: 2,
+                  childAspectRatio: 138 / 85,
+                  crossAxisSpacing: 5,
+                  mainAxisSpacing: 3,
+                ),
+                shrinkWrap: true,
+                physics: const BouncingScrollPhysics(
+                    parent: AlwaysScrollableScrollPhysics()),
+                children: const [
+                  WishlistTile(
+                    imagePath: AppAssetsManagement.wishlistBook1,
+                    title: 'Good Company',
+                    author: 'Cynthia D.S',
+                    star: 4,
+                  ),
+                  WishlistTile(
+                    imagePath: AppAssetsManagement.wishlistBook2,
+                    title: 'Book Lovers',
+                    author: 'Emily Henry',
+                    star: 5,
+                  ),
+                  WishlistTile(
+                    imagePath: AppAssetsManagement.wishlistBook3,
+                    title: 'Leaving Time',
+                    author: 'Jodi Picoult',
+                    star: 3,
+                  ),
+                  WishlistTile(
+                    imagePath: AppAssetsManagement.wishlistBook4,
+                    title: 'Silent Scream',
+                    author: 'Angela Marsons',
+                    star: 4,
+                  ),
+                  WishlistTile(
+                    imagePath: AppAssetsManagement.wishlistBook5,
+                    title: 'The Kite Runner',
+                    author: 'Khaled Hosseini',
+                    star: 5,
+                  ),
+                  WishlistTile(
+                    imagePath: AppAssetsManagement.wishlistBook6,
+                    title: 'Father of the Rain',
+                    author: 'Lily King',
+                    star: 4,
+                  ),
+                  WishlistTile(
+                    imagePath: AppAssetsManagement.wishlistBook3,
+                    title: 'Leaving Time',
+                    author: 'Jodi Picoult',
+                    star: 3,
+                  ),
+                  WishlistTile(
+                    imagePath: AppAssetsManagement.wishlistBook1,
+                    title: 'Good Company',
+                    author: 'Cynthia D.S',
+                    star: 4,
+                  ),
+                  WishlistTile(
+                    imagePath: AppAssetsManagement.wishlistBook4,
+                    title: 'Silent Scream',
+                    author: 'Angela Marsons',
+                    star: 4,
+                  ),
+                ],
+              ),
+            ),
+          ),
+          const SizedBox(
+            height: 60,
           ),
         ],
       ),
