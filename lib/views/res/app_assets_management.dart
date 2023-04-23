@@ -24,4 +24,10 @@ abstract class AppAssetsManagement {
   static const String wishlistBook5 = '$bookPath/wishlist_book_5.png';
   static const String wishlistBook6 = '$bookPath/wishlist_book_6.png';
   static const String banner = '$bookPath/banner.png';
+  static const String categoryBook1 = '$bookPath/category_book_1.png';
+  static const String categoryBook2 = '$bookPath/category_book_2.png';
+  static const String categoryBook3 = '$bookPath/category_book_3.png';
+  static const String categoryBook4 = '$bookPath/category_book_4.png';
+  static const String categoryBook5 = '$bookPath/category_book_5.png';
+  static const String categoryBook6 = '$bookPath/category_book_6.png';
 }
