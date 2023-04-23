@@ -23,4 +23,5 @@ abstract class AppAssetsManagement {
   static const String wishlistBook4 = '$bookPath/wishlist_book_4.png';
   static const String wishlistBook5 = '$bookPath/wishlist_book_5.png';
   static const String wishlistBook6 = '$bookPath/wishlist_book_6.png';
+  static const String banner = '$bookPath/banner.png';
 }
