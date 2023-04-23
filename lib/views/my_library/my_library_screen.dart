@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../res/export_resources.dart';
+import '../widgets/export_widgets.dart';
 import 'local_widgets/export_home_widgets.dart';
 
 class MyLibraryScreen extends StatelessWidget {
@@ -178,9 +179,9 @@ class MyLibraryScreen extends StatelessWidget {
               ),
             ),
           ),
-          const SizedBox(
-            height: 60,
-          ),
+          // const SizedBox(
+          //   height: 75,
+          // ),
         ],
       ),
     );

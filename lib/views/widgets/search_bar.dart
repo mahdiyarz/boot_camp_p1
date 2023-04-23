@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../res/export_resources.dart';
+import '../res/export_resources.dart';
 
 class SearchBar extends StatelessWidget {
   const SearchBar({
