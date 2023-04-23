@@ -13,6 +13,7 @@ abstract class AppAssetsManagement {
   static const String exploreSelected = '$iconPath/explore_selected.png';
   static const String cart = '$iconPath/cart.png';
   static const String community = '$iconPath/community.png';
+  static const String profile = '$iconPath/profile.png';
 
   static const String bookPath = 'assets/books';
   static const String libraryBook1 = '$bookPath/library_book_1.png';
@@ -30,4 +31,5 @@ abstract class AppAssetsManagement {
   static const String categoryBook4 = '$bookPath/category_book_4.png';
   static const String categoryBook5 = '$bookPath/category_book_5.png';
   static const String categoryBook6 = '$bookPath/category_book_6.png';
+  static const String bookReview = '$bookPath/book_review.png';
 }
