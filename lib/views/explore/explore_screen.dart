@@ -1,3 +1,4 @@
+import 'package:boot_camp_p1/views/book_review/book_review_screen.dart';
 import 'package:flutter/material.dart';
 
 import '../res/export_resources.dart';
@@ -156,60 +157,114 @@ class _ExploreScreenState extends State<ExploreScreen> {
                 shrinkWrap: true,
                 physics: const BouncingScrollPhysics(
                     parent: AlwaysScrollableScrollPhysics()),
-                children: const [
+                children: [
                   CategoriesTile(
                     imagePath: AppAssetsManagement.categoryBook1,
                     title: 'The Story of Marie Curie',
                     author: 'Susan R Katy',
                     rating: 4,
+                    onTap: () => Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const BookReviewScreen(),
+                      ),
+                    ),
                   ),
                   CategoriesTile(
                     imagePath: AppAssetsManagement.categoryBook2,
                     title: 'At Home with Mohammed Ali',
                     author: 'Hana Alli',
                     rating: 3,
+                    onTap: () => Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const BookReviewScreen(),
+                      ),
+                    ),
                   ),
                   CategoriesTile(
                     imagePath: AppAssetsManagement.categoryBook3,
                     title: 'Malcolm X',
                     author: 'Alex Haley',
                     rating: 5,
+                    onTap: () => Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const BookReviewScreen(),
+                      ),
+                    ),
                   ),
                   CategoriesTile(
                     imagePath: AppAssetsManagement.categoryBook4,
                     title: 'Becoming Michelle Obama',
                     author: 'Michelle Obama',
                     rating: 4,
+                    onTap: () => Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const BookReviewScreen(),
+                      ),
+                    ),
                   ),
                   CategoriesTile(
                     imagePath: AppAssetsManagement.categoryBook5,
                     title: 'The Story of Walt Disney',
                     author: 'Susan R Katy',
                     rating: 4,
+                    onTap: () => Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const BookReviewScreen(),
+                      ),
+                    ),
                   ),
                   CategoriesTile(
                     imagePath: AppAssetsManagement.categoryBook6,
                     title: 'The Happiest Man on Earth',
                     author: 'Author Name',
                     rating: 5,
+                    onTap: () => Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const BookReviewScreen(),
+                      ),
+                    ),
                   ),
                   CategoriesTile(
                     imagePath: AppAssetsManagement.categoryBook4,
                     title: 'Becoming Michelle Obama',
                     author: 'Michelle Obama',
                     rating: 4,
+                    onTap: () => Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const BookReviewScreen(),
+                      ),
+                    ),
                   ),
                   CategoriesTile(
                     imagePath: AppAssetsManagement.categoryBook3,
                     title: 'Malcolm X',
                     author: 'Alex Haley',
                     rating: 5,
+                    onTap: () => Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const BookReviewScreen(),
+                      ),
+                    ),
                   ),
                   CategoriesTile(
                     imagePath: AppAssetsManagement.categoryBook1,
                     title: 'The Story of Marie Curie',
                     author: 'Susan R Katy',
                     rating: 2,
+                    onTap: () => Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const BookReviewScreen(),
+                      ),
+                    ),
                   ),
                 ],
               ),
