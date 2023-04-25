@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 abstract class FontConstants {
   static const String fontFamily = 'Urbanist';
+  static const String reviewFontFamily = 'Poppins';
 }
 
 abstract class FontWeightManagement {
@@ -41,6 +42,19 @@ TextStyle getRegularStyle({
 }) {
   return _getTextStyle(
     FontConstants.fontFamily,
+    fontSize,
+    FontWeightManagement.regular,
+    fontColor,
+  );
+}
+
+//* Review Regular Style
+TextStyle reviewGetRegularStyle({
+  double fontSize = FontSize.s12,
+  required Color fontColor,
+}) {
+  return _getTextStyle(
+    FontConstants.reviewFontFamily,
     fontSize,
     FontWeightManagement.regular,
     fontColor,
