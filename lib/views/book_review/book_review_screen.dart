@@ -1,8 +1,9 @@
-import 'package:boot_camp_p1/views/res/app_assets_management.dart';
 import 'package:flutter/material.dart';
 
+import 'local_widgets/books_banner.dart';
 import 'local_widgets/profile_header.dart';
 import 'local_widgets/wishlist_button.dart';
+import 'local_widgets/review_panel.dart';
 
 class BookReviewScreen extends StatefulWidget {
   const BookReviewScreen({super.key});
@@ -41,16 +42,15 @@ class _BookReviewScreenState extends State<BookReviewScreen> {
           const SizedBox(
             height: 20,
           ),
-          Container(
-            margin: const EdgeInsets.symmetric(horizontal: 20),
-            width: 348,
-            height: 212,
-            child: Image.asset(AppAssetsManagement.bookReview),
-          ),
+          const BooksBanner(),
           const SizedBox(
             height: 20,
           ),
           const ProfileHeader(),
+          const SizedBox(
+            height: 20,
+          ),
+          const ReviewPanel(),
         ],
       ),
     );
